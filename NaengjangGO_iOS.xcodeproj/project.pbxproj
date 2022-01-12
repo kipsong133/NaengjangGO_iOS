@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2523232A278EDF5C008449E2 /* SizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25232329278EDF5C008449E2 /* SizeHelper.swift */; };
 		25666E4C278EBE79009B9C78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25666E4B278EBE79009B9C78 /* AppDelegate.swift */; };
 		25666E4E278EBE79009B9C78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25666E4D278EBE79009B9C78 /* SceneDelegate.swift */; };
 		25666E50278EBE79009B9C78 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25666E4F278EBE79009B9C78 /* LoginViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		0C80FBFD356DB7AB6AB014F2 /* Pods-NaengjangGO_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaengjangGO_iOS.debug.xcconfig"; path = "Target Support Files/Pods-NaengjangGO_iOS/Pods-NaengjangGO_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		25232329278EDF5C008449E2 /* SizeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeHelper.swift; sourceTree = "<group>"; };
 		25666E48278EBE79009B9C78 /* NaengjangGO_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaengjangGO_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25666E4B278EBE79009B9C78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25666E4D278EBE79009B9C78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			children = (
 				259B04CB278EC64B005399C8 /* Constant.swift */,
 				259B04D2278ECBFB005399C8 /* UIFont.swift */,
+				25232329278EDF5C008449E2 /* SizeHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				259B04CE278EC939005399C8 /* AppCoordinator.swift in Sources */,
+				2523232A278EDF5C008449E2 /* SizeHelper.swift in Sources */,
 				25666E50278EBE79009B9C78 /* LoginViewController.swift in Sources */,
 				259B04D1278EC9E4005399C8 /* LoginCoordinator.swift in Sources */,
 				259B04C8278EC61C005399C8 /* MainTabbarController.swift in Sources */,
