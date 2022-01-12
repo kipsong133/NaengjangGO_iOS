@@ -13,9 +13,11 @@
 		25666E53278EBE79009B9C78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25666E51278EBE79009B9C78 /* Main.storyboard */; };
 		25666E55278EBE7A009B9C78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25666E54278EBE7A009B9C78 /* Assets.xcassets */; };
 		25666E58278EBE7A009B9C78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25666E56278EBE7A009B9C78 /* LaunchScreen.storyboard */; };
+		92FE44C350D8ECCFD397F556 /* Pods_NaengjangGO_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F292CBA2B37BE115C64F91B /* Pods_NaengjangGO_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C80FBFD356DB7AB6AB014F2 /* Pods-NaengjangGO_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaengjangGO_iOS.debug.xcconfig"; path = "Target Support Files/Pods-NaengjangGO_iOS/Pods-NaengjangGO_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		25666E48278EBE79009B9C78 /* NaengjangGO_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaengjangGO_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25666E4B278EBE79009B9C78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25666E4D278EBE79009B9C78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		25666E54278EBE7A009B9C78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25666E57278EBE7A009B9C78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25666E59278EBE7A009B9C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F292CBA2B37BE115C64F91B /* Pods_NaengjangGO_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NaengjangGO_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E10AD0BDEFABB9B77E731F03 /* Pods-NaengjangGO_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaengjangGO_iOS.release.xcconfig"; path = "Target Support Files/Pods-NaengjangGO_iOS/Pods-NaengjangGO_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92FE44C350D8ECCFD397F556 /* Pods_NaengjangGO_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				25666E4A278EBE79009B9C78 /* NaengjangGO_iOS */,
 				25666E49278EBE79009B9C78 /* Products */,
+				8386EE20597FBF74E4305360 /* Pods */,
+				52EDBE75103903E3E3A3749D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = NaengjangGO_iOS;
 			sourceTree = "<group>";
 		};
+		52EDBE75103903E3E3A3749D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F292CBA2B37BE115C64F91B /* Pods_NaengjangGO_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8386EE20597FBF74E4305360 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C80FBFD356DB7AB6AB014F2 /* Pods-NaengjangGO_iOS.debug.xcconfig */,
+				E10AD0BDEFABB9B77E731F03 /* Pods-NaengjangGO_iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25666E5C278EBE7A009B9C78 /* Build configuration list for PBXNativeTarget "NaengjangGO_iOS" */;
 			buildPhases = (
+				8EBB502C0266B63E736CE1E2 /* [CP] Check Pods Manifest.lock */,
 				25666E44278EBE79009B9C78 /* Sources */,
 				25666E45278EBE79009B9C78 /* Frameworks */,
 				25666E46278EBE79009B9C78 /* Resources */,
+				2A017992DD8FEC01C5A2D3DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A017992DD8FEC01C5A2D3DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NaengjangGO_iOS/Pods-NaengjangGO_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NaengjangGO_iOS/Pods-NaengjangGO_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NaengjangGO_iOS/Pods-NaengjangGO_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EBB502C0266B63E736CE1E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NaengjangGO_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		25666E44278EBE79009B9C78 /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		25666E5D278EBE7A009B9C78 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C80FBFD356DB7AB6AB014F2 /* Pods-NaengjangGO_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		25666E5E278EBE7A009B9C78 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E10AD0BDEFABB9B77E731F03 /* Pods-NaengjangGO_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
