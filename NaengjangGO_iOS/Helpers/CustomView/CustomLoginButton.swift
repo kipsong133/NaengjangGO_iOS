@@ -11,10 +11,13 @@ import SnapKit
 
 class CustomLoginButton: UIButton {
     
+    private var loginMode: Bool = true
+    
     private let alrearyUserLabel = UILabel().then {
         $0.text = "이미 회원이신가요?"
         $0.textColor = .brownishGreyTwo
         $0.font = UIFont.systemFont(ofSize: 13, weight: .regular)
+        $0.textAlignment = .right
     }
     
     private let loginLabel = UILabel().then {
@@ -62,6 +65,16 @@ class CustomLoginButton: UIButton {
             make.left.equalTo(loginLabel.snp.left)
                 .inset(1)
         }
+    }
+    
+    public func updateUI() {
+        self.loginMode.toggle()
+        self.alrearyUserLabel.text = loginMode ?
+        "이미 회원이신가요?":
+        "가입하시겠어요?"
+        self.loginLabel.text = loginMode ?
+        "로그인" :
+        "회원가입"
     }
 }
 

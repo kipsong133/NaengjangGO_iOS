@@ -11,6 +11,7 @@
 		2523232D278EE529008449E2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2523232C278EE529008449E2 /* CustomTextField.swift */; };
 		2523232F278EE5D1008449E2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2523232E278EE5D1008449E2 /* UIColor+Extension.swift */; };
 		25232331278EEC9F008449E2 /* CustomLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25232330278EEC9F008449E2 /* CustomLoginButton.swift */; };
+		25232333278EFABD008449E2 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25232332278EFABD008449E2 /* LoginVM.swift */; };
 		25666E4C278EBE79009B9C78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25666E4B278EBE79009B9C78 /* AppDelegate.swift */; };
 		25666E4E278EBE79009B9C78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25666E4D278EBE79009B9C78 /* SceneDelegate.swift */; };
 		25666E50278EBE79009B9C78 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25666E4F278EBE79009B9C78 /* LoginViewController.swift */; };
@@ -30,6 +31,7 @@
 		2523232C278EE529008449E2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		2523232E278EE5D1008449E2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		25232330278EEC9F008449E2 /* CustomLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoginButton.swift; sourceTree = "<group>"; };
+		25232332278EFABD008449E2 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		25666E48278EBE79009B9C78 /* NaengjangGO_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaengjangGO_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25666E4B278EBE79009B9C78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25666E4D278EBE79009B9C78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,13 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
+		25232334278EFD4A008449E2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		25666E3F278EBE79009B9C78 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +109,7 @@
 		259B04C1278EC5D2005399C8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				25232334278EFD4A008449E2 /* Router */,
 				259B04C5278EC5FF005399C8 /* 0.Authentication */,
 				259B04C6278EC60B005399C8 /* 1.Main */,
 			);
@@ -158,6 +168,7 @@
 			children = (
 				25666E4F278EBE79009B9C78 /* LoginViewController.swift */,
 				259B04D0278EC9E4005399C8 /* LoginCoordinator.swift */,
+				25232332278EFABD008449E2 /* LoginVM.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -294,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				259B04CE278EC939005399C8 /* AppCoordinator.swift in Sources */,
+				25232333278EFABD008449E2 /* LoginVM.swift in Sources */,
 				25232331278EEC9F008449E2 /* CustomLoginButton.swift in Sources */,
 				2523232A278EDF5C008449E2 /* SizeHelper.swift in Sources */,
 				25666E50278EBE79009B9C78 /* LoginViewController.swift in Sources */,

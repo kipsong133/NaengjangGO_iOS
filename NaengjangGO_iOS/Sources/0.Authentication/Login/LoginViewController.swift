@@ -16,6 +16,7 @@ protocol LoginViewControllerDelegate: AnyObject {
 class LoginViewController: UIViewController {
     // MARK: - Properties
     weak var delegate: LoginViewControllerDelegate?
+    var vm: LoginVM
     
     private let progressDotImageView = UIImageView().then {
         $0.image = UIImage(named: "progressDot1")
@@ -59,6 +60,14 @@ class LoginViewController: UIViewController {
         $0.backgroundColor = UIColor.buttonBlack
     }
     
+    init(vm: LoginVM) {
+        self.vm = vm
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 // MARK: - View Lifecycle
@@ -74,8 +83,12 @@ extension LoginViewController {
 extension LoginViewController {
     
     @objc
-    func loginButtonDidTap() {
-        print("로그인버튼: 클릭됨.")
+    func loginButtonDidTap(_ sender: UIButton) {
+        vm.loginMode.toggle()
+        registrationButton.setTitle(
+            vm.loginMode ? "회원가입" : "로그인",
+            for: .normal)
+        loginButton.updateUI()
     }
 }
 

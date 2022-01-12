@@ -11,5 +11,5 @@ target 'NaengjangGO_iOS' do
     pod 'RxCocoa'
 pod 'Then'
 pod 'SnapKit', '~> 5.0.0'
-
+pod 'Alamofire', '~> 5.5'
 end

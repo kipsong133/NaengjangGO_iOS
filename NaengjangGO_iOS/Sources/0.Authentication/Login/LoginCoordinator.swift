@@ -23,7 +23,7 @@ class LoginCoordinator: Coordinator, LoginViewControllerDelegate {
     }
     
     func start() {
-        let viewController = LoginViewController()
+        let viewController = LoginViewController(vm: LoginVM())
         viewController.navigationController?.navigationBar.isHidden = true
         viewController.delegate = self
         self.navigationController.viewControllers = [viewController]
