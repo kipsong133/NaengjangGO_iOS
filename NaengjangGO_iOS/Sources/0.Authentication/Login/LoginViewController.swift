@@ -41,6 +41,24 @@ class LoginViewController: UIViewController {
         $0.contentMode = .scaleAspectFit
     }
     
+    private let emailTextField = CustomTextField(title: "이메일", "이메일 입력")
+    private let passwordTextField = CustomTextField(title: "비밀번호", "비밀번호 입력")
+    
+    private let passwordConditionLabel = UILabel().then {
+        $0.text = "최소 8자 이상 / 영문자, 숫자, 특수문자 포함"
+        $0.textColor = .brownishGreyTwo
+        $0.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        $0.textAlignment = .right
+    }
+
+    private let loginButton = CustomLoginButton()
+    
+    private let registrationButton = UIButton(type: .system).then {
+        $0.setTitle("회원가입", for: .normal)
+        $0.setTitleColor(.white, for: .normal)
+        $0.backgroundColor = UIColor.buttonBlack
+    }
+    
 }
 
 // MARK: - View Lifecycle
@@ -55,6 +73,10 @@ extension LoginViewController {
 // MARK: - Actions
 extension LoginViewController {
     
+    @objc
+    func loginButtonDidTap() {
+        print("로그인버튼: 클릭됨.")
+    }
 }
 
 // MARK: - Helpers
@@ -92,10 +114,61 @@ extension LoginViewController {
                 .offset(autoLayoutHeight(27.3))
             make.centerX.equalTo(view.snp.centerX)
             make.width.equalTo(autoLayoutWidth(241.7))
-            make.height.equalTo(autoLayoutHeight(241.7))
+            make.height.equalTo(autoLayoutHeight(204))
         }
         
+        view.addSubview(emailTextField)
+        emailTextField.snp.makeConstraints { make in
+            make.top.equalTo(midImageView.snp.bottom)
+                .offset(autoLayoutHeight(50.2))
+            make.left.equalTo(view.snp.left)
+                .offset(autoLayoutWidth(32))
+            make.right.equalTo(view.snp.right)
+                .offset(-autoLayoutWidth(33))
+            make.height.equalTo(autoLayoutHeight(31))
+        }
         
+        view.addSubview(passwordTextField)
+        passwordTextField.snp.makeConstraints { make in
+            make.top.equalTo(emailTextField.snp.bottom)
+                .offset(autoLayoutHeight(46))
+            make.left.equalTo(emailTextField.snp.left)
+            make.right.equalTo(emailTextField.snp.right)
+            make.height.equalTo(autoLayoutHeight(31))
+        }
+        
+        view.addSubview(passwordConditionLabel)
+        passwordConditionLabel.snp.makeConstraints { make in
+            make.top.equalTo(passwordTextField.snp.bottom)
+                .offset(autoLayoutHeight(10))
+            make.right.equalTo(view.snp.right)
+                .inset(autoLayoutWidth(46))
+            make.width.equalTo(autoLayoutWidth(228))
+        }
+        
+        view.addSubview(loginButton)
+        loginButton.snp.makeConstraints { make in
+            make.centerX.equalTo(view.snp.centerX)
+            make.bottom.equalTo(view.snp.bottom)
+                .inset(autoLayoutHeight(46))
+            make.width.equalTo(autoLayoutWidth(143))
+            make.height.equalTo(autoLayoutHeight(20))
+        }
+        loginButton.addTarget(
+            self, action: #selector(loginButtonDidTap), for: .touchUpInside)
+        
+        view.addSubview(registrationButton)
+        registrationButton.snp.makeConstraints { make in
+            make.centerX.equalTo(view.snp.centerX)
+            make.bottom.equalTo(loginButton.snp.top)
+                .inset(autoLayoutHeight(-10))
+            make.left.equalTo(view.snp.left)
+                .offset(autoLayoutWidth(32))
+            make.right.equalTo(view.snp.right)
+                .inset(autoLayoutWidth(32))
+            make.height.equalTo(autoLayoutHeight(56))
+        }
+        registrationButton.layer.cornerRadius = 28
     }
 }
 
