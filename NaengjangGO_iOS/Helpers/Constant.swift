@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class Constant {
+    static let shared = Constant()
+    
+    var jwt: String?
+    
+    private init() { }
+}
