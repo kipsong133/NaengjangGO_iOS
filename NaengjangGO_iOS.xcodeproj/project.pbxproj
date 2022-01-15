@@ -22,6 +22,12 @@
 		2580DBF427927D97003D4168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2580DBF327927D97003D4168 /* Main.storyboard */; };
 		2580DBF727927DC5003D4168 /* TransitionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2580DBF627927DC5003D4168 /* TransitionStyle.swift */; };
 		2580DBF927927DEF003D4168 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2580DBF827927DEF003D4168 /* Scene.swift */; };
+		2580DBFD27927ED1003D4168 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2580DBFC27927ED1003D4168 /* LoginViewController.swift */; };
+		2580DBFF27927EFD003D4168 /* SceneCoordinatoerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2580DBFE27927EFD003D4168 /* SceneCoordinatoerType.swift */; };
+		2580DC0127927F3A003D4168 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2580DC0027927F3A003D4168 /* SceneCoordinator.swift */; };
+		2580DC0527928205003D4168 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2580DC0427928205003D4168 /* MemoryStorage.swift */; };
+		2580DC0827928304003D4168 /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2580DC0727928304003D4168 /* CommonViewModel.swift */; };
+		2580DC0A27928362003D4168 /* ViewModelBindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2580DC0927928362003D4168 /* ViewModelBindableType.swift */; };
 		259B04CC278EC64B005399C8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259B04CB278EC64B005399C8 /* Constant.swift */; };
 		259B04D3278ECBFB005399C8 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259B04D2278ECBFB005399C8 /* UIFont.swift */; };
 		92FE44C350D8ECCFD397F556 /* Pods_NaengjangGO_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F292CBA2B37BE115C64F91B /* Pods_NaengjangGO_iOS.framework */; };
@@ -46,6 +52,12 @@
 		2580DBF327927D97003D4168 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2580DBF627927DC5003D4168 /* TransitionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionStyle.swift; sourceTree = "<group>"; };
 		2580DBF827927DEF003D4168 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		2580DBFC27927ED1003D4168 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2580DBFE27927EFD003D4168 /* SceneCoordinatoerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatoerType.swift; sourceTree = "<group>"; };
+		2580DC0027927F3A003D4168 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		2580DC0427928205003D4168 /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
+		2580DC0727928304003D4168 /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
+		2580DC0927928362003D4168 /* ViewModelBindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindableType.swift; sourceTree = "<group>"; };
 		259B04CB278EC64B005399C8 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		259B04D2278ECBFB005399C8 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		6F292CBA2B37BE115C64F91B /* Pods_NaengjangGO_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NaengjangGO_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,9 +137,9 @@
 		2580DBF127927D2F003D4168 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				2580DBF327927D97003D4168 /* Main.storyboard */,
 				259B04C5278EC5FF005399C8 /* 0.Authentication */,
 				259B04C6278EC60B005399C8 /* 1.Main */,
-				2580DBF327927D97003D4168 /* Main.storyboard */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -137,13 +149,42 @@
 			children = (
 				2580DBF627927DC5003D4168 /* TransitionStyle.swift */,
 				2580DBF827927DEF003D4168 /* Scene.swift */,
+				2580DBFE27927EFD003D4168 /* SceneCoordinatoerType.swift */,
+				2580DC0027927F3A003D4168 /* SceneCoordinator.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		2580DC02279281F8003D4168 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2580DC03279281FF003D4168 /* MemoryStorage */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2580DC03279281FF003D4168 /* MemoryStorage */ = {
+			isa = PBXGroup;
+			children = (
+				2580DC0427928205003D4168 /* MemoryStorage.swift */,
+			);
+			path = MemoryStorage;
+			sourceTree = "<group>";
+		};
+		2580DC06279282FE003D4168 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2580DC0727928304003D4168 /* CommonViewModel.swift */,
+				2580DC0927928362003D4168 /* ViewModelBindableType.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		259B04C1278EC5D2005399C8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2580DC06279282FE003D4168 /* ViewModel */,
+				2580DC02279281F8003D4168 /* Service */,
 				2580DBF527927DB4003D4168 /* Scene */,
 				2580DBF127927D2F003D4168 /* UserInterface */,
 				25232334278EFD4A008449E2 /* Router */,
@@ -199,6 +240,7 @@
 		259B04CF278EC9D4005399C8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				2580DBFC27927ED1003D4168 /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -335,10 +377,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2580DC0827928304003D4168 /* CommonViewModel.swift in Sources */,
 				25232331278EEC9F008449E2 /* CustomLoginButton.swift in Sources */,
 				25232339278F04F6008449E2 /* LoginRequest.swift in Sources */,
+				2580DC0127927F3A003D4168 /* SceneCoordinator.swift in Sources */,
 				2523232A278EDF5C008449E2 /* SizeHelper.swift in Sources */,
+				2580DC0A27928362003D4168 /* ViewModelBindableType.swift in Sources */,
+				2580DBFD27927ED1003D4168 /* LoginViewController.swift in Sources */,
 				2523233D278F04FF008449E2 /* LoginRouter.swift in Sources */,
+				2580DC0527928205003D4168 /* MemoryStorage.swift in Sources */,
 				2580DBF927927DEF003D4168 /* Scene.swift in Sources */,
 				2523233B278F04FA008449E2 /* LoginResponse.swift in Sources */,
 				2523232F278EE5D1008449E2 /* UIColor+Extension.swift in Sources */,
@@ -349,6 +396,7 @@
 				259B04CC278EC64B005399C8 /* Constant.swift in Sources */,
 				25666E4C278EBE79009B9C78 /* AppDelegate.swift in Sources */,
 				25666E4E278EBE79009B9C78 /* SceneDelegate.swift in Sources */,
+				2580DBFF27927EFD003D4168 /* SceneCoordinatoerType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
