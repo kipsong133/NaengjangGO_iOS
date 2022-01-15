@@ -7,8 +7,11 @@ target 'NaengjangGO_iOS' do
 
   # Pods for NaengjangGO_iOS
 
-    pod 'RxSwift'
-    pod 'RxCocoa'
+pod 'RxSwift'
+pod 'RxCocoa'
+pod 'Action'
+pod 'NSObject+Rx'
+pod 'RxDataSources'
 pod 'Then'
 pod 'SnapKit', '~> 5.0.0'
 pod 'Alamofire', '~> 5.5'

@@ -16,6 +16,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let scene = (scene as? UIWindowScene) else { return }
         
+//        if #available(iOS 15.0, *) {
+//            let navigationBarAppearance = UINavigationBarAppearance()
+//            navigationBarAppearance.backgroundColor = .clear
+//            
+//            UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+//            UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+//            UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+//        }
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SplashVC") as! SplashViewController
         let window = UIWindow(windowScene: scene)
@@ -23,9 +32,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
 //        let storage = MemoryStorage()
         let coordinator = SceneCoordinator(window: self.window!)
-//        let viewModel = LoginViewModel
+        let viewModel = LoginViewModel(
+            title: "",
+            sceneCoordinator: coordinator)
         
-        let loginScene = Scene.login
+        let loginScene = Scene.login(viewModel)
         
         coordinator.transition(
             to: loginScene,

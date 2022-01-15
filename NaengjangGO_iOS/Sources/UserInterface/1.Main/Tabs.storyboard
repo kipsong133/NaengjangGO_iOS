@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="f2b-YY-BYR">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="uHi-u0-vXf" customClass="HomeViewController" customModule="NaengjangGO_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="soc-Y5-ALz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmd-rw-Rpz">
+                                <rect key="frame" x="98" y="381.5" width="218" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="133" id="2uf-0P-XI7"/>
+                                    <constraint firstAttribute="width" constant="218" id="rRn-fD-pcU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DIc-T5-xLK"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kmd-rw-Rpz" firstAttribute="centerX" secondItem="soc-Y5-ALz" secondAttribute="centerX" id="0xM-UB-3oP"/>
+                            <constraint firstItem="kmd-rw-Rpz" firstAttribute="centerY" secondItem="soc-Y5-ALz" secondAttribute="centerY" id="Bjx-QT-qIQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oV9-DE-BSL"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bpc-Bl-hya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950.72463768115949" y="22.767857142857142"/>
+        </scene>
+        <!--My Profile View Controller-->
+        <scene sceneID="Lej-ge-ALg">
+            <objects>
+                <viewController storyboardIdentifier="MyProfileVC" id="Ulx-VY-Cs5" customClass="MyProfileViewController" customModule="NaengjangGO_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pzd-8h-0dW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="knS-qA-glC"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oCM-1C-4ul"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gEQ-OM-uwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="768"/>
+        </scene>
+        <!--냉장고-->
+        <scene sceneID="S61-eu-GTj">
+            <objects>
+                <navigationController storyboardIdentifier="HomeNav" automaticallyAdjustsScrollViewInsets="NO" id="nen-0T-LO3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="냉장고" id="jT0-0L-zXr"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OTH-Ws-XZZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uHi-u0-vXf" kind="relationship" relationship="rootViewController" id="o5S-Rc-7uf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sb9-0v-Z5h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.579710144927539" y="22.767857142857142"/>
+        </scene>
+        <!--내 정보-->
+        <scene sceneID="Vyi-RT-wgP">
+            <objects>
+                <navigationController storyboardIdentifier="MyProfileNav" automaticallyAdjustsScrollViewInsets="NO" id="nq6-FH-3bg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="내 정보" id="Ggy-dS-2ds"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cMa-eh-e0q">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ulx-VY-Cs5" kind="relationship" relationship="rootViewController" id="Hry-gj-f1I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJ8-6f-Q65" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41" y="768"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
