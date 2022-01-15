@@ -14,17 +14,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let scene = (scene as? UIWindowScene) else { return }
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SplashVC") as! SplashViewController
+        let window = UIWindow(windowScene: scene)
+        window.rootViewController = vc
+        self.window = window
 //        let storage = MemoryStorage()
-        let coordinator = SceneCoordinator(window: window!)
+        let coordinator = SceneCoordinator(window: self.window!)
 //        let viewModel = LoginViewModel
         
         let loginScene = Scene.login
         
         coordinator.transition(
             to: loginScene,
-            using: .push,
+            using: .root,
             animated: true)
     }
 

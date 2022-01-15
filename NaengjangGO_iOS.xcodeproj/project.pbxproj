@@ -28,6 +28,7 @@
 		2580DC0527928205003D4168 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2580DC0427928205003D4168 /* MemoryStorage.swift */; };
 		2580DC0827928304003D4168 /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2580DC0727928304003D4168 /* CommonViewModel.swift */; };
 		2580DC0A27928362003D4168 /* ViewModelBindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2580DC0927928362003D4168 /* ViewModelBindableType.swift */; };
+		2580DC0C2792911B003D4168 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2580DC0B2792911B003D4168 /* SplashViewController.swift */; };
 		259B04CC278EC64B005399C8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259B04CB278EC64B005399C8 /* Constant.swift */; };
 		259B04D3278ECBFB005399C8 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259B04D2278ECBFB005399C8 /* UIFont.swift */; };
 		92FE44C350D8ECCFD397F556 /* Pods_NaengjangGO_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F292CBA2B37BE115C64F91B /* Pods_NaengjangGO_iOS.framework */; };
@@ -58,6 +59,7 @@
 		2580DC0427928205003D4168 /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
 		2580DC0727928304003D4168 /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
 		2580DC0927928362003D4168 /* ViewModelBindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindableType.swift; sourceTree = "<group>"; };
+		2580DC0B2792911B003D4168 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		259B04CB278EC64B005399C8 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		259B04D2278ECBFB005399C8 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		6F292CBA2B37BE115C64F91B /* Pods_NaengjangGO_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NaengjangGO_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,7 @@
 				2580DBF327927D97003D4168 /* Main.storyboard */,
 				259B04C5278EC5FF005399C8 /* 0.Authentication */,
 				259B04C6278EC60B005399C8 /* 1.Main */,
+				2580DC0B2792911B003D4168 /* SplashViewController.swift */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				2580DBF927927DEF003D4168 /* Scene.swift in Sources */,
 				2523233B278F04FA008449E2 /* LoginResponse.swift in Sources */,
 				2523232F278EE5D1008449E2 /* UIColor+Extension.swift in Sources */,
+				2580DC0C2792911B003D4168 /* SplashViewController.swift in Sources */,
 				2523232D278EE529008449E2 /* CustomTextField.swift in Sources */,
 				259B04D3278ECBFB005399C8 /* UIFont.swift in Sources */,
 				25232336278F032C008449E2 /* Router.swift in Sources */,
@@ -543,6 +547,7 @@
 				INFOPLIST_FILE = NaengjangGO_iOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -571,6 +576,7 @@
 				INFOPLIST_FILE = NaengjangGO_iOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
