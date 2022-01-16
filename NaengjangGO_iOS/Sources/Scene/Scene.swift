@@ -11,7 +11,8 @@ import UIKit
 enum Scene {
     case register(RegisterViewModel)
     case login(LoginViewModel)
-    case tabs
+    case tabs(HomeViewModel)
+    case search(SearchViewModel)
 }
 
 extension Scene {
@@ -47,7 +48,7 @@ extension Scene {
             
             return registerVC
             
-        case .tabs:
+        case .tabs(let homeViewModel):
             let storyboard = UIStoryboard(name: "Tabs", bundle: nil)
 //            let tabVC = storyboard.instantiateViewController(withIdentifier: "MainTabVC")
             
@@ -69,11 +70,29 @@ extension Scene {
                 fatalError()
             }
             
+            DispatchQueue.main.async {
+                homeVC.bind(viewModel: homeViewModel)
+            }
+            
             tabVC.viewControllers = [homeNav, myProfileNav]
             tabVC.tabBar.backgroundColor = .lightGray
             return tabVC
+            
+        case .search(let searchViewMoel):
+            let storyboard = UIStoryboard(name: "Tabs", bundle: nil)
+            
+            guard var searchVC = storyboard.instantiateViewController(withIdentifier: "SearchVC") as? SearchViewController else {
+                fatalError()
+            }
+            
+            DispatchQueue.main.async {
+                searchVC.bind(viewModel: searchViewMoel)
+            }
+            
+            return searchVC
         }
         
+    
     
     }
 }

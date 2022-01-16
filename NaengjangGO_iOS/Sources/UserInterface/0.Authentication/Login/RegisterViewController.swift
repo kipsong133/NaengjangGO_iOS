@@ -16,7 +16,7 @@ class RegisterViewController: UIViewController, ViewModelBindableType {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationItem.hidesBackButton = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,7 +40,7 @@ class RegisterViewController: UIViewController, ViewModelBindableType {
             action: nil)
         
         backbutton.rx.action = viewModel.popAction
-        navigationItem.hidesBackButton = true
+        
         navigationItem.leftBarButtonItem = backbutton
     }
     

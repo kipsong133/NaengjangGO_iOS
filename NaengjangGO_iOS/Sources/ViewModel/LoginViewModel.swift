@@ -32,7 +32,11 @@ class LoginViewModel: CommonViewModel {
     func pushMainTabAction() -> CocoaAction {
         return CocoaAction { _ in
             
-            let mainTabScene = Scene.tabs
+            let homeViewModel = HomeViewModel(
+                title: "",
+                sceneCoordinator: self.sceneCoordinator)
+            // TODO: 추후에 다른 탭바 ViewModel도 추가할 것
+            let mainTabScene = Scene.tabs(homeViewModel)
             
             return self.sceneCoordinator.transition(
                 to: mainTabScene,

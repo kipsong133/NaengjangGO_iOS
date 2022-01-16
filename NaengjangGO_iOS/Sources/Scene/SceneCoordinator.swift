@@ -19,11 +19,7 @@ class SceneCoordinator: SceneCoordinatorType {
     private let bag = DisposeBag()
     
     private var window: UIWindow
-    private var currentVC: UIViewController {
-        didSet {
-            print("현재VC: \(currentVC)")
-        }
-    }
+    private var currentVC: UIViewController
     
     required init(window: UIWindow) {
         self.window = window
@@ -42,14 +38,14 @@ class SceneCoordinator: SceneCoordinatorType {
         
         switch style {
         case .root:
-            
+        
             currentVC = target.sceneViewController
             window.rootViewController = target
             UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil)
             subject.onCompleted()
             
         case .push:
-
+            print("CurrentVC: \(currentVC)")
             guard let nav = currentVC.navigationController else {
                 subject.onError(TransitionError.navigationControllerMissing)
                 break
@@ -104,5 +100,9 @@ class SceneCoordinator: SceneCoordinatorType {
         }
         
         return subject.asCompletable()
+    }
+    
+    public func changeCurrentTabVC(_ vc: UIViewController) {
+        self.currentVC = vc
     }
 }
