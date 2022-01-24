@@ -10,7 +10,6 @@ import Action
 
 class HomeViewModel: CommonViewModel {
     
-
     func pushSearchAction(_ homeVC: HomeViewController) -> CocoaAction  {
         return CocoaAction { _ in
 
@@ -18,7 +17,7 @@ class HomeViewModel: CommonViewModel {
                 title: "",
                 sceneCoordinator: self.sceneCoordinator)
             
-            let searchScene = Scene.search(searchViewModel) // VC
+            let searchScene = Scene.search(searchViewModel)
             self.sceneCoordinator.changeCurrentTabVC(homeVC)
             return self.sceneCoordinator.transition(
                 to: searchScene,

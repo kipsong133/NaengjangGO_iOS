@@ -45,7 +45,6 @@ class SceneCoordinator: SceneCoordinatorType {
             subject.onCompleted()
             
         case .push:
-            print("CurrentVC: \(currentVC)")
             guard let nav = currentVC.navigationController else {
                 subject.onError(TransitionError.navigationControllerMissing)
                 break
